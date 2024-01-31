@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Now", sans-serif;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    background-color: antiquewhite;
+}
+
+.header{
+    height: 95vh;
+    width: 96vw;
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(https://natour.netlify.app/img/hero.jpg);
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.header__text-container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.header__text-container__title{ 
+    font-weight: 500;
+    font-size: 58px;
+    color: #ffffff;
+    letter-spacing: 40px;
+    animation: moveToRight 1s ease-in-out;
+}
+
+.header__text-container__subtitle{
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    margin-top: -20px;
+    animation: moveToLeft 0.5s ease-out;
+}
+
+.header__button{
+    background-color: #ffffff;
+    border: none;
+    padding:20px 15px;
+    width: 250px;
+    border-radius: 30px;
+    margin-top: 70px;
+    text-transform: uppercase;
+    color:#777777;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header__button:link,
+.header__button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+/* 
+.header__button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header__button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+} */
+
+.header__button::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.header__button--animated{
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.header__button:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    margin: 20px;
+    font-weight: 300;
+}
+
+.header__menu-container{
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.header__menu-icon{
+    width: 30px;
+    height: 30px;
+    margin-top:10px
+}
+
+
+@keyframes moveToTop {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}
+
+@keyframes moveToRight {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(2%);
+    }
+}
+
+@keyframes moveToLeft {
+    from {
+      transform: translateX(20%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
