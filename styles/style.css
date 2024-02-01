@@ -13,14 +13,16 @@ body {
     justify-content: center;
     align-items: center;
     margin: 30px;
-    background-color: antiquewhite;
+    background-color: #f7f7f7;
 }
 
+/* header styles */
 .header{
-    height: 95vh;
-    width: 96vw;
+    height: 80vh;
+    width: 100vw;
+    padding-top: 100px;
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(https://natour.netlify.app/img/hero.jpg);
-    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 81%, 0% 100%);
 }
 
 .header__text-container{
@@ -49,91 +51,206 @@ body {
     animation: moveToLeft 0.5s ease-out;
 }
 
-.header__button{
+.header__logo{
+    margin: 50px;
+    width: 60px;
+}
+
+
+/* navigation styles */
+
+.navigation{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navigation__checkbox{
+    display: none;
+}
+
+.navigation__icon{
+    position:relative;
+    margin-top: 30px;
+}
+
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+}
+
+.navigation__icon::before,
+.navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation__icon::before{
+    top: -1rem;
+}
+
+.navigation__icon::after{
+    top: 1rem;
+}
+
+/* hamburger menu effect */
+.navigation__background{
+    background-image: radial-gradient(#7ed56f, #28b485);
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    top: 70px;
+    right: 70px;
+}
+
+/* hamburger button */
+.navigation__button{
     background-color: #ffffff;
-    border: none;
+    color: #000;
+    height: 60px;
+    width: 62px;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 2000;
+    top: 50px;
+    right: 50px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.navigation__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 30px;
+    left:30px;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.navigation__list{
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+.navigation__item{
+    margin: 1rem;
+}
+
+.navigation__link{
+display: inline-block;
+font-size: 30px;
+font-weight:300;
+padding: 10px 20px;
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+background-image: linear-gradient(120deg, transparent 0%,transparent 50%,#ffffff 50%);
+background-size: 220%;
+transition: all 0.4s;
+}
+
+.navigation__link:hover,
+.navigation__link:active {
+    background-position: 100%;
+    color: #000;
+    transform: translateX(1rem);
+}
+
+.navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(120);
+}
+
+.navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 100%;
+}
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon{
+    background-color: transparent;
+}
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
+    top: 0rem;
+    transform: rotate(135deg);
+}
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
+    top: 0rem;
+    transform: rotate(-135deg);
+}
+
+/* button */
+
+.header__button {
+    text-transform: uppercase;
+    text-decoration: none;
     padding:20px 15px;
     width: 250px;
     border-radius: 30px;
     margin-top: 70px;
-    text-transform: uppercase;
-    color:#777777;
+    display: inline-block;
+    border-radius: 30px;
+    transition: all 0.2s;
+    position: relative;
     font-size: 16px;
+    border: none;
     cursor: pointer;
 }
 
-.header__button:link,
-.header__button:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all .2s;
-    position: absolute;
+.header__button--white {
+    background-color: #ffffff;
+    color: #777777;
 }
-/* 
+
+.header__button--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+}
+
 .header__button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.header__button:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-} */
-
-.header__button::after{
+.header__button::after {
     content: "";
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 30px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    transition: all .4s;
+    transition: all 0.4s;
 }
 
-.header__button--animated{
-    animation: moveInBottom 5s ease-out;
-    animation-fill-mode: backwards;
-}
-
-.header__button:hover::after{
+.header__button:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__logo{
-    margin: 20px;
-    font-weight: 300;
-}
-
-.header__menu-container{
+.header__button--white::after {
     background-color: #ffffff;
-    border-radius: 50%;
-    display: inline-block;
-    padding: 10px;
-    margin: 20px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
 }
-
-.header__menu-icon{
-    width: 30px;
-    height: 30px;
-    margin-top:10px
-}
-
 
 @keyframes moveToTop {
     from {
@@ -167,9 +284,9 @@ nav{
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(0);
     }
 }
-
