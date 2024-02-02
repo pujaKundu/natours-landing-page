@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+:root{
+    
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -171,7 +175,7 @@ transition: all 0.4s;
 .navigation__link:hover,
 .navigation__link:active {
     background-position: 100%;
-    color: #000;
+    color: #55c57a;
     transform: translateX(1rem);
 }
 
@@ -289,35 +293,30 @@ transition: all 0.4s;
     margin-top: 50px;
 }
 
-.about__btn:hover{
+.row--text>.about__btn:hover{
     background-color: #55c57a;
     color: #ffffff;
-    translate: 25px;
+    transform: translateY(5%);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .row{
     display: flex;
-    padding: 0 150px;
+    padding: 0 100px;
     margin-top:80px;
-}
-
-.row::after{
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .row--text{
     color: #777777;
-    width: calc( (100% - 3rem) / 2);
+    width: 35vw;
+    margin-left: -10vw;
 }
 
-.row__text__sub-heading{
+.row--text>.row__text__sub-heading{
     text-transform: uppercase;
     margin: 30px 0;
     font-size: 14px;
-    font-weight: 700;
+    font-weight:bolder;
 }
 
 .row__text__paragraph{
@@ -325,6 +324,68 @@ transition: all 0.4s;
     margin-bottom: 30px;
 }
 
+/* aboout image */
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.composition{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.composition__photo{
+    float: left;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 2rem;
+    border-radius: 2px;
+}
+
+.composition__photo:hover{
+    outline: 12px solid #55c57a;
+    transform: scale(1.05) translateY(-0.5);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+.composition__photo--p2{
+    position: absolute;
+    margin-left: 20vw;
+    margin-top: 5vh;
+    width: 260px;
+}
+
+.composition__photo--p1{
+    margin-left: 5vw;
+    width: 260px;
+}
+
+.composition__photo--p3{
+    width: 260px;
+    margin-left: 10vw;
+    margin-top: -8vh;
+}
+
+.composition__photo--p1:hover{
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+.composition__photo--p2:hover{
+    top: 0;
+    left: -1rem;
+    z-index: 20;
+}
+
+.composition__photo--p3:hover{
+    top: 1rem;
+    left: 0;
+    z-index: 30;
+}
 /* header animations */
 
 @keyframes moveToTop {
