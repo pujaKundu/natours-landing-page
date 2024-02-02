@@ -1,153 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="navigation">
-        <input
-          type="checkbox"
-          class="navigation__checkbox"
-          id="navigation-toggle"
-        />
 
-        <label for="navigation-toggle" class="navigation__button">
-          <span class="navigation__icon"> &nbsp; </span>
-        </label>
-        <div class="navigation__background">&nbsp;</div>
-        <nav class="navigation__nav">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">
-                <span>01</span>
-                About natours
-              </a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link"
-                ><span>02 </span>Your Benefits</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link"
-                ><span>03 </span>Popular Tours</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link"><span>04 </span>Stories</a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link"><span>05 </span>Book Now</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <header class="header">
-        <div class="header__logo-box">
-          <img
-            src="https://natour.netlify.app/img/logo-white.png"
-            alt="logo"
-            class="header__logo"
-          />
-        </div>
-        <div class="header__text-container">
-          <div>
-            <h1 class="header__text-container__title">OUTDOORS</h1>
-            <h3 class="header__text-container__subtitle">
-              is where life happens
-            </h3>
-          </div>
-          <button
-            class="header__button header__button--white header__button--animated"
-          >
-            Discover Our Tours
-          </button>
-        </div>
-      </header>
-      <!-- main section -->
-      <main>
-        <!-- about section -->
-        <section class="about">
-          <h2 class="about__heading">Exciting tours for adventurous people</h2>
-          <div class="row">
-            <!-- text column -->
-            <div class="row--text">
-              <div>
-                <h3 class="row__text__sub-heading text--bold">
-                  You're going to fall in love with nature.
-                </h3>
-                <p class="row__text__paragraph">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestiae laudantium sit saepe? Rerum aspernatur ab, autem eum
-                  cupiditate esse soluta corporis at suscipit quas neque! Fuga
-                  aut quibusdam quo magnam, odit minima repellendus possimus
-                  consequatur. Ipsum, quasi?
-                </p>
-              </div>
-              <div>
-                <h3 class="row__text__sub-heading">
-                    Live adventures like you never have before.
-                </h3>
-                <p class="row__text__paragraph">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestiae laudantium sit saepe? Rerum aspernatur ab, autem eum
-                  cupiditate esse soluta corporis at suscipit quas neque! Fuga
-                  aut quibusdam quo magnam, odit minima repellendus possimus
-                  consequatur. Ipsum, quasi?
-                </p>
-              </div>
-              <a href="#" class="about__btn">Learn more →</a>
-            </div>
-            <!-- image column -->
-            <div>
-              <div class="composition">
-                <img src="https://natour.netlify.app/img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" >
-                <img  alt="Photo 2" class="composition__photo composition__photo--p2"   src="https://natour.netlify.app/img/nat-2-large.jpg">
-                <img alt="Photo 3"  class="composition__photo composition__photo--p3" src="https://natour.netlify.app/img/nat-3-large.jpg">
-              </div>
-               
-            </div>
-          </div>
-        </section>
-        <!-- explore section -->
-        <section class="explore">
-          <div class="card-container">
-            <div class="card">
-              <!-- icon -->
-              <img src="/asstes/icons/world.png" alt="icon" class="icon">
-              <h4 class="card__heading">Explore the world</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quisquam?Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card">
-              <!-- icon -->
-              <img src="/asstes/icons/compass.png" alt="icon" class="icon">
-              <h4 class="card__heading">Meet nature</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quisquam?Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card">
-              <!-- icon -->
-              <img src="/asstes/icons/arrows.png" alt="icon" class="icon">
-              <h4 class="card__heading">Find your way</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quisquam?Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card">
-              <!-- icon -->
-              <img src="/asstes/icons/heart.png" alt="icon" class="icon">
-              <h4 class="card__heading">Live a healthier life</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quisquam?Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-         
-          
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <title>Document</title>
+</head>
 
-        </section>
-      </main>
+<body>
+  <div class="container">
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navigation-toggle" />
+
+      <label for="navigation-toggle" class="navigation__button">
+        <span class="navigation__icon"> &nbsp; </span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+              <span>01</span>
+              About natours
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>02 </span>Your Benefits</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>03 </span>Popular Tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>04 </span>Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>05 </span>Book Now</a>
+          </li>
+        </ul>
+      </nav>
     </div>
+    <header class="header">
+      <div class="header__logo-box">
+        <img src="https://natour.netlify.app/img/logo-white.png" alt="logo" class="header__logo" />
+      </div>
+      <div class="header__text-container">
+        <div>
+          <h1 class="header__text-container__title">OUTDOORS</h1>
+          <h3 class="header__text-container__subtitle">
+            is where life happens
+          </h3>
+        </div>
+        <button class="header__button header__button--white header__button--animated">
+          Discover Our Tours
+        </button>
+      </div>
+    </header>
+    <!-- main section -->
+    <main>
+      <!-- about section -->
+      <section class="about">
+        <h2 class="about__heading about__heading--left">Exciting tours for adventurous people</h2>
+        <div class="row">
+          <!-- text column -->
+          <div class="row--text">
+            <div>
+              <h3 class="row__text__sub-heading text--bold">
+                You're going to fall in love with nature.
+              </h3>
+              <p class="row__text__paragraph">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae laudantium sit saepe? Rerum aspernatur ab, autem eum
+                cupiditate esse soluta corporis at suscipit quas neque! Fuga
+                aut quibusdam quo magnam, odit minima repellendus possimus
+                consequatur. Ipsum, quasi?
+              </p>
+            </div>
+            <div>
+              <h3 class="row__text__sub-heading">
+                Live adventures like you never have before.
+              </h3>
+              <p class="row__text__paragraph">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae laudantium sit saepe? Rerum aspernatur ab, autem eum
+                cupiditate esse soluta corporis at suscipit quas neque! Fuga
+                aut quibusdam quo magnam, odit minima repellendus possimus
+                consequatur. Ipsum, quasi?
+              </p>
+            </div>
+            <a href="#" class="about__btn">Learn more →</a>
+          </div>
+          <!-- image column -->
+          <div>
+            <div class="composition">
+              <img src="https://natour.netlify.app/img/nat-1-large.jpg" alt="Photo 1"
+                class="composition__photo composition__photo--p1">
+              <img alt="Photo 2" class="composition__photo composition__photo--p2"
+                src="https://natour.netlify.app/img/nat-2-large.jpg">
+              <img alt="Photo 3" class="composition__photo composition__photo--p3"
+                src="https://natour.netlify.app/img/nat-3-large.jpg">
+            </div>
 
-    <script src="js/main.js"></script>
-  </body>
+          </div>
+        </div>
+      </section>
+      <!-- explore section -->
+      <section class="explore">
+        <div class="card-container">
+          <div class="card">
+            <!-- icon -->
+            <img src="/asstes/icons/world.png" alt="icon" class="icon">
+            <h4 class="card__heading">Explore the world</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quisquam?Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="card">
+            <!-- icon -->
+            <img src="/asstes/icons/compass.png" alt="icon" class="icon">
+            <h4 class="card__heading">Meet nature</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quisquam?Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="card">
+            <!-- icon -->
+            <img src="/asstes/icons/arrows.png" alt="icon" class="icon">
+            <h4 class="card__heading">Find your way</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quisquam?Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="card">
+            <!-- icon -->
+            <img src="/asstes/icons/heart.png" alt="icon" class="icon">
+            <h4 class="card__heading">Live a healthier life</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quisquam?Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </section>
+      <!-- popular tourse -->
+      <section class="popular">
+        <h2 class="popular__heading">most popular tours</h2>
+        <div class="package-container">
+
+          <div class="package-card-container">
+            <div class="package-card">
+              <div class="package-card__side package-card__side--front">
+                <div class="package-card__picture package-card__picture--1"></div>
+                <h4 class="package-card__heading">
+                  <span class="package-card__heading-span package-card__heading-span--1">
+                    <span class="padding-right">The sea </span><br><br>
+                    <span class="padding-left">explorer</span>
+                </h4>
+                <div >
+                  <ul class="list package-card__details">
+                    <li class="list__item list--border">3 day tour</li>
+                    <li class="list__item list--border">Up to 30 people</li>
+                    <li class="list__item list--border">2 tour guides</li>
+                    <li class="list__item list--border">Sleep in cozy hotels</li>
+                    <li class="list__item ">Difficulty: easy</li>
+                  </ul>
+                </div>
+              </div>
+  
+              <!-- back -->
+              <div class="package-card__side package-card__side--back package-card__side--back--1">
+                <div class="package-card__cta">
+                  <div class="package-card__price-box">
+                    <p class="package-card__price-only">Only</p>
+                    <p class="package-card__price-value">$297</p>
+                  </div>
+                  <a href="" class="btn btn-white">Book now</a>
+                </div>
+              </div>
+            </div>
+  
+            <div>
+              <div class="package-card">
+                <div class="package-card__side package-card__side--front">
+                  <div class="package-card__picture package-card__picture--2"></div>
+                  <h4 class="package-card__heading">
+                    <span class="package-card__heading-span package-card__heading-span--2">
+                      <span class="padding-right">The forest</span> <br><br>
+                      <span class="padding-left">hiker</span>
+                       </span>
+                  </h4>
+                  <div >
+                    <ul class="package-card__details">
+                      <li class="list__item list--border">3 day tour</li>
+                      <li class="list__item list--border">Up to 30 people</li>
+                      <li class="list__item list--border">2 tour guides</li>
+                      <li class="list__item list--border">Sleep in cozy hotels</li>
+                      <li class="list__item">Difficulty: easy</li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <!-- back -->
+                <div class="package-card__side package-card__side--back package-card__side--back--2">
+                  <div class="package-card__cta">
+                    <div class="package-card__price-box">
+                      <p class="package-card__price-only">Only</p>
+                      <p class="package-card__price-value">$297</p>
+                    </div>
+                    <a href="" class="btn btn-white">Book now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div>
+              <div class="package-card">
+                <div class="package-card__side package-card__side--front">
+                  <div class="package-card__picture package-card__picture--3"></div>
+                  <h4 class="package-card__heading">
+                    <span class="package-card__heading-span package-card__heading-span--3">
+                      <span class="padding-right">the snow</span><br><br><span class="padding-left">adventurer</span>
+                      </span>
+                  </h4>
+                  <div>
+                    <ul class="package-card__details">
+                      <li class="list__item list--border">3 day tour</li>
+                      <li class="list__item list--border">Up to 30 people</li>
+                      <li class="list__item list--border">2 tour guides</li>
+                      <li class="list__item list--border">Sleep in cozy hotels</li>
+                      <li class="list__item">Difficulty: easy</li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <!-- back -->
+                <div class="package-card__side package-card__side--back package-card__side--back--3">
+                  <div class="package-card__cta">
+                    <div class="package-card__price-box">
+                      <p class="package-card__price-only">Only</p>
+                      <p class="package-card__price-value">$297</p>
+                    </div>
+                    <a href="" class="btn btn-white">Book now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+  </div>
+  </section>
+  </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
