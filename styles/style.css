@@ -217,11 +217,11 @@ transition: all 0.4s;
 
 /* button */
 
-.header__button {
+.btn {
     text-transform: uppercase;
     text-decoration: none;
-    padding:20px 15px;
-    width: 250px;
+    padding:20px 25px;
+    /* width: 250px; */
     border-radius: 30px;
     margin-top: 70px;
     display: inline-block;
@@ -233,22 +233,27 @@ transition: all 0.4s;
     cursor: pointer;
 }
 
-.header__button--white {
+.btn--white {
     background-color: var(--text-white);;
     color: var(--text-gray);
 }
 
-.header__button--animated {
+.btn--green{
+    background-color: var(--bg-color-green);;
+    color: var(--text-white);
+}
+
+.btn--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
 }
 
-.header__button:hover {
+.btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem var(--shadow-mid);
 }
 
-.header__button::after {
+.btn::after {
     content: "";
     display: inline-block;
     height: 100%;
@@ -261,13 +266,17 @@ transition: all 0.4s;
     transition: all 0.4s;
 }
 
-.header__button:hover::after {
+.btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
 
-.header__button--white::after {
+.btn--white::after {
     background-color: var(--text-white);;
+}
+
+.btn--green::after {
+    background-color: var(--bg-color-green);;
 }
 
 /* about section styles */
