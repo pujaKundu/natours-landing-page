@@ -692,6 +692,125 @@ background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba
     font-weight: 100;
 } 
 
+
+/* review style */
+
+.reviews {
+    padding: 5rem 0;
+    position: relative;
+    text-align: center;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .3;
+    overflow: hidden;
+}
+
+.bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.reviews__heading{
+    /* margin-bottom: 5rem; */
+    z-index: 20;
+    opacity: 1;
+}
+
+.reviews__container:not(:last-child) {
+    margin-bottom: 5rem;
+}
+.reviews__container {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.review {
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    padding: 4rem 4rem;
+    padding-left: 9rem;
+    font-size: 1.2rem;
+    transform: skewX(-12deg);
+}
+
+.review--figure {
+    width: 9rem;
+    height: 9rem;
+    overflow: hidden;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+}
+
+.review__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.2);
+    backface-visibility: hidden;
+    transition: all .5s;
+}
+
+.review__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+.review:hover .review__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
+    backface-visibility: hidden;
+}
+
+.review:hover .review__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.review__text {
+    transform: skewX(12deg);
+}
+
+.review__text p {
+    font-size: 14px;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1rem;
+}
+.heading-tertiary {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.reviews__container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* header animations */
 
 @keyframes moveToTop {
