@@ -292,7 +292,7 @@ h3,h4{
 /* about section styles */
 
 .about{
-    margin-top: 15vh;
+    margin-top: 5vh;
     padding: 20px;
     height: 100vh;
     margin-left: 15vw;
@@ -432,7 +432,7 @@ img{
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(https://natour.netlify.app/img/nat-4.jpg);
     clip-path: polygon(0 14%, 100% 0, 100% 85%, 0% 100%);
     padding: 0;
-    margin-top: -10vh;
+    margin-top: -20vh;
 }
 .card-container{
     display: flex;
@@ -483,15 +483,42 @@ img{
 
     .composition{
         margin-top:5vh;
-        margin-left:-15vw;
+        margin-left:-25vw;
+    }
+    .composition__photo--p2{
+        position: absolute;
+        margin-left: 20vw;
+        margin-top: 5vh;
+        width: 180px;
+    }
+    
+    .composition__photo--p1{
+        margin-left: 5vw;
+        width: 180px;
+    }
+    
+    .composition__photo--p3{
+        width: 180px;
+        margin-left: 10vw;
+        margin-top: -3vh;
     }
     .about__heading{
         font-size: 14px;
     }
     
-
+    /* explore */
+    .explore{
+        margin-top: 20vh;
+        width: 90vw;
+        margin-left: 3vw;
+    }
     .card-container{
         flex-direction: column;
+    }
+    
+    .card__heading{
+        width: 200px;
+        height: 250px;
     }
 }
 
@@ -609,20 +636,26 @@ img{
 .package-card__price-box{
     text-align: center;
     color: var(--text-white);
-    margin-bottom: 6rem; 
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-left: 5vw;
 }
 
-.package-card__price-box>.package-card__price-only {
-    font-size: 1rem;
+.package-card__price-only{
     text-transform: uppercase;
+    padding-left: 3vw;
     margin-top: 5rem;
 }
 
-.package-card__price-box> .package-card__price-value {
+.package-card__price-value{
+    margin-top: -2vh;
+    font-weight: 100;
     font-size: 5rem;
-    font-weight: 100 !important;
-}
-
+} 
 .package-card__side {
     height: 32rem;
     transition: all .8s ease;
@@ -726,34 +759,13 @@ img{
     text-align: center;
 }
 
-.package-card__price-box{
-    text-align: center;
-    color: var(--text-white);
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5vh;
-    padding-left: 5vw;
-}
-
-.package-card__price-only{
-    /* font-size:1.4rem; */
-    text-transform: uppercase;
-    padding-left: 3vw;
-}
-
-.package-card__price-value{
-    margin-top: -2vh;
-} 
 
 .btn--top{
     margin-top: -0.6vh;
 }
 
 .text--thin{
-    font-weight: 100 ;
+    font-weight: 100;
 }
 
 /* review style */
