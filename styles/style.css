@@ -22,8 +22,17 @@ body {
     padding: 0;
     font-family: "Now", sans-serif;
     box-sizing: border-box;
-    /* font-family: 'Lato', sans-serif; */
     font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+h3,h4{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 700;
 }
 
 .container {
@@ -72,9 +81,10 @@ body {
 }
 
 .header__logo{
-    width: 60px;
+    width: 65px;
     margin-left: 30px;
 }
+
 
 /* navigation styles */
 
@@ -221,8 +231,7 @@ body {
 .btn {
     text-transform: uppercase;
     text-decoration: none;
-    padding:20px 25px;
-    /* width: 250px; */
+    padding:15px 35px;
     border-radius: 30px;
     margin-top: 70px;
     display: inline-block;
@@ -283,7 +292,6 @@ body {
 /* about section styles */
 
 .about{
-    /* background-color: var(--bg-color-light); */
     margin-top: 15vh;
     padding: 20px;
     height: 100vh;
@@ -425,7 +433,6 @@ img{
     clip-path: polygon(0 14%, 100% 0, 100% 85%, 0% 100%);
     padding: 0;
     margin-top: -10vh;
-    /* margin-left: 7vw; */
 }
 .card-container{
     display: flex;
@@ -447,6 +454,47 @@ img{
     padding-right: 15px;
     transition: all .2s;
 }
+
+/* media queries */
+
+@media only screen and (max-width: 600px) {
+    .header{
+        width: 90vw;
+    }
+    .header__text-container{
+        margin-top: 15vh;
+    }
+    .header__text-container__title{
+        font-size: 34px;
+        letter-spacing: 10px;
+    }
+    .header__text-container__subtitle{
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    /* about */
+
+    .row{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .composition{
+        margin-top:5vh;
+        margin-left:-15vw;
+    }
+    .about__heading{
+        font-size: 14px;
+    }
+    
+
+    .card-container{
+        flex-direction: column;
+    }
+}
+
 
 .card:hover{
     transform: translateY(-3vh);
@@ -488,6 +536,7 @@ img{
     letter-spacing: 2px;
     transition: all 0.2s;
     text-align: center;
+
 }
 
 .popular__heading:hover {
@@ -550,11 +599,6 @@ img{
 }
 
 .package-card__content {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -599,14 +643,14 @@ img{
     color:var(--text-white);
     margin-top:-15vh;
     z-index: 20;
+    width: 300px;
 }
 .package-card__heading-span{
     padding: 1rem 1.6rem; 
-  
 }
 
 .package-card__heading-span--1 {
-background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
 }
 
 .package-card__heading-span--2 {
@@ -690,22 +734,25 @@ background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 5vh;
+    padding-left: 5vw;
 }
 
 .package-card__price-only{
-    font-size:1.4rem;
+    /* font-size:1.4rem; */
     text-transform: uppercase;
+    padding-left: 3vw;
 }
 
 .package-card__price-value{
-    font-weight: 100 !important;
+    margin-top: -2vh;
 } 
 
 .btn--top{
-    margin-top: -5vh;
+    margin-top: -0.6vh;
 }
 
-.package-card__price-box > .text--thin{
+.text--thin{
     font-weight: 100 ;
 }
 
@@ -1050,8 +1097,8 @@ background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 9999;
     opacity: 1;
-    /* visibility: hidden;  */
-    /* transition: all .3s;  */
+    visibility: hidden; 
+    transition: all .3s; 
 }  
 
 .popup__content{
@@ -1171,3 +1218,5 @@ background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba
         transform: translate(0);
     }
 }
+
+
