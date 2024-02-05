@@ -837,14 +837,19 @@ background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba
     position: relative;
 }
 
+.review__btn:hover{
+    background-color: var(--light-green);
+    color: var(--bg-color-light);
+    box-shadow: 0 1rem 2rem var(--shadow-mid);
+    padding: 3px 5px;
+}
 
 /* form */
 
 .section__book{
-    padding: 15rem 0;
+    padding: 10rem 0;
     background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
 }
-
 
 .section__book_container {
     max-width: 60rem;
@@ -947,6 +952,8 @@ background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba
     opacity: 1;
 }
 
+
+
 .heading--left{
     text-align: left;
 }
@@ -1008,7 +1015,6 @@ background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba
     padding: 1rem;
     width: 80%;
     float: right;
-    /* margin-top: -0.5rem; */
 }
 
 .footer__link:link, .footer__link:visited {
@@ -1032,6 +1038,99 @@ background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba
     clear: both;
 }
 
+
+/* popup styles */
+
+.popup{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    opacity: 1;
+    /* visibility: hidden;  */
+    /* transition: all .3s;  */
+}  
+
+.popup__content{
+    position: absolute;
+    top: 15%;
+    left: 13%;
+    width: 75%;
+    background-color: var(--text-white);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    opacity: 1;
+    display: flex;
+} 
+
+.popup-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__left{
+    width: 33.33%;
+    display: table-cell;
+}
+
+.popup__img{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 260px;
+    margin-right: 20vw;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.popup__right{
+    width: 66.66%;
+    display: flex;
+}
+
+.popup__close:link, .popup__close:visited{
+    color: var(--text-gray);
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1;
+}
+
+.popup__text{
+    font-size: 14px;
+    color: var(--text-gray);
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #eee;
+    hyphens: auto;
+    line-height: 1.5rem;
+}
+
+.text--gray{
+    color: var(--text-gray);
+    font-weight: 700;
+}
+
+.text--left{
+    margin-left: 3vw;
+}
+
+.text--top{
+    margin-top: 10vh;
+}
+
+.text--right{
+    margin-right: 3vw;
+}
 /* header animations */
 
 @keyframes moveToTop {
