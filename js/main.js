@@ -11,9 +11,43 @@ navBtn.addEventListener("click", () => {
 
 
 
-document.getElementById('openPopup').addEventListener('click', function(event) {
-  
-  event.preventDefault();
+document.getElementById('openPopup').addEventListener('click', function() {
+
+  var popup = document.getElementById('popup');
+
+  popup.style.opacity = 1;
+  popup.style.visibility = 'visible';
+  document.body.classList.add('popup-open');
+});
+
+
+document.querySelector('.popup__close').addEventListener('click', function() {
+  var popup = document.getElementById('popup');
+  popup.style.opacity = 0;
+  popup.style.visibility = 'hidden';
+
+  document.body.classList.remove('popup-open');
+});
+
+document.getElementById('openPopup-2').addEventListener('click', function() {
+
+  var popup = document.getElementById('popup');
+
+  popup.style.opacity = 1;
+  popup.style.visibility = 'visible';
+  document.body.classList.add('popup-open');
+});
+
+
+document.querySelector('.popup__close').addEventListener('click', function() {
+  var popup = document.getElementById('popup');
+  popup.style.opacity = 0;
+  popup.style.visibility = 'hidden';
+
+  document.body.classList.remove('popup-open');
+});
+
+document.getElementById('openPopup-3').addEventListener('click', function() {
 
   var popup = document.getElementById('popup');
 
