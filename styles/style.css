@@ -23,6 +23,7 @@ body {
     font-family: "Now", sans-serif;
     box-sizing: border-box;
     font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    /* overflow-x: hidden; */
 }
 
 h3,h4{
@@ -162,17 +163,19 @@ h3,h4{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     position: fixed;
     z-index: 1500;
     opacity: 0;
+    margin-top: 25vh;
     transition: all 0.8s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 
 .navigation__list{
     list-style: none;
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
+    margin-left: -15vw;
 }
 
 .navigation__item{
@@ -181,7 +184,7 @@ h3,h4{
 
 .navigation__link{
     display: inline-block;
-    font-size: 30px;
+    font-size: 28px;
     font-weight:300;
     padding: 10px 20px;
     color: var(--text-white);;
@@ -205,7 +208,7 @@ h3,h4{
 
 .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
-    width: 100%;
+    width: 110vw;
 }
 
 .navigation__checkbox:checked ~ .navigation__button .navigation__icon{
@@ -1155,14 +1158,19 @@ img{
 /* media queries */
 
 @media only screen and (max-width: 600px) {
-    .container{
-        margin: 0;
-        width: 96vw;
+    main{
+        max-width: 576px;
     }
+    .container {
+        margin: 0;
+        /* width: 96vw; */
+        /* max-width: 96vw; */
+    }
+    
     .navigation__button{
         height: 40px;
         width: 42px;
-        right:120px;
+        right:56px;
         top:28px
     }
     .navigation__icon{
@@ -1182,7 +1190,7 @@ img{
 }
 .navigation__background{
     top: 30px;
-    right: 120px;
+    right: 58px;
 }
 .navigation__link{
     font-size:16px;
@@ -1202,6 +1210,7 @@ img{
     font-size: 12px;
 }
    .header{
+    width: 100vw;
     clip-path: polygon(0 0, 100% 0%, 100% 88%, 0% 100%);
    }
     .header__logo{
@@ -1260,15 +1269,16 @@ img{
     /* explore */
     .explore{
         /* margin-top: 20vh; */
-        width: 88%;
-        margin-left: 3vw;
+        width: 100vw;
+        /* margin-left: 3vw; */
         height: 120vh;
         clip-path: polygon(0 7%, 100% 0, 100% 85%, 0% 95%);
     }
     .card-container{
         flex-direction: column;
         margin-bottom: 20vh;
-       padding-top: 20vh;
+        padding-top: 20vh;
+
     }
     .card{
         width: 220px;
@@ -1293,14 +1303,15 @@ img{
     }
     .package-card-container{
         flex-direction: column;
-        margin-left:10vw;
+        /* margin-left:10vw; */
     }
-
+    
     .package-card-container .package-card {
         width: 290px;
         margin-bottom: 15vh;
         margin-top: -5vh;
     }
+    
     .package-card__heading{
         font-size: 12px;
     }
@@ -1376,8 +1387,8 @@ img{
 
     /*  */
     .reviews{
-        width: 96vw;
-        margin-left: 11vw;
+        width: 100vw;
+        /* margin-left: 11vw; */
     }
     .review{
         width: 220px;
@@ -1415,7 +1426,7 @@ img{
     .section__book{
         height: 50vh;
         padding: 7rem 0;
-        width: 90%
+        width: 100%
     }
     .section__book_container {
         width: 45%;
@@ -1427,6 +1438,7 @@ img{
     .book{
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(/asstes/images/book-bg.jpg);
         margin: 0;
+        margin-left: -10vw;
     }
     .book__form{
         margin-left: -5vw;
@@ -1456,7 +1468,7 @@ img{
     
     /* footer */
     .footer{
-        width: 36.5%;
+        /* width: 36.5; */
         height: 5vh;
     }
     
@@ -1467,14 +1479,18 @@ img{
     .footer__logo{
         height: 50px;
         width: 70px;
-        margin-left: 6vw;
+        /* margin-left: 6vw; */
     }
     .footer__row{
         text-align: center;
-        margin-left: 5vw;
+        margin-left: -5vw;
     }
     .footer__row .col-1-of-2 {
-        width: 100% ;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .footer__list{
         display: flex;
@@ -1486,9 +1502,8 @@ img{
     }
     .footer__copyright{
         font-size: 8px;
-    }
-    .left{
-        margin-left: -2.5vw;
+        width: 43vw;
+        text-align: left;
     }
 }
 
